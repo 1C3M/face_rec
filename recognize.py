@@ -24,7 +24,7 @@ def matching_file(encoding):
     if True in matches:
         first_match_index = matches.index(True)
         name = known_face_names[first_match_index]
-        distance = np.linalg.norm(known_face_encodings[first_match_index]-npy_file)
+        distance = np.linalg.norm(known_face_encodings[first_match_index]-encoding)
 
     return (name,distance)
 
